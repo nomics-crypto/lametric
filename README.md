@@ -1,2 +1,0 @@
-# lametric
-LaMetric Clock App

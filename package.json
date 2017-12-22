@@ -1,0 +1,20 @@
+{
+  "name": "nomics-lametric",
+  "version": "0.0.1",
+  "description": "Nomics API to Lametric Clock",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://nomics.com"
+  },
+  "license": "MIT",
+  "keywords": []
+}
