@@ -4,10 +4,12 @@
   "description": "Nomics API to Lametric Clock",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node src/server.js"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5"
   },
   "engines": {
     "node": "8.x"
