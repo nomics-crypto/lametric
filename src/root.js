@@ -1,6 +1,6 @@
 const request = require('request-promise-native');
 
-const key = "2GEF1zuwkDpQAL036qrwrVWUeRIx3fQ8";
+const key = process.env.NOMICS_API_KEY;
 
 const formatter = new Intl.NumberFormat(
   'en-US', {style: 'currency', currency: 'USD', maximumFractionDigits: 0, minimumFractionDigits: 0}
