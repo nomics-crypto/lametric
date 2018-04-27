@@ -1,4 +1,4 @@
-const request = require('request-promise-native');
+const fetch = require('node-fetch');
 
 const key = process.env.NOMICS_API_KEY;
 
@@ -45,7 +45,7 @@ const iconFromDelta = function(mkt) {
 }
 
 module.exports = async function root(req, res) {
-  const dashboard = JSON.parse(await request("https://api.nomics.com/v1/dashboard?key="+key));
-  const sparkline = JSON.parse(await request("https://api.nomics.com/v1/market-cap/sparkline?key="+key));
+  const dashboard = await (await fetch("https://api.nomics.com/v1/dashboard?key="+key)).json();
+  const sparkline = await (await fetch("https://api.nomics.com/v1/market-cap/sparkline?key="+key)).json();
   res.json(frames(req.query, dashboard, sparkline));
 }
